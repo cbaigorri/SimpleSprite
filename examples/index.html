@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Simple Sprite Example</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <div id="example1"></div>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="../vendor/jquery-1.7.2.min.js"><\/script>')</script>
+
+  <script src="../src/jquery.simplesprite.js"></script>
+  
+  <script>
+    $(function(){
+      
+      var monster = $('#example1')
+        .simpleSprite({
+          frame:10,
+          fps:10,
+          width:64,
+          height:64,
+          sprite:'img/MonsterARun.png',
+          autoplay: false
+        });
+      
+      monster.play();
+      
+      setTimeout(function(){
+        monster.stop();
+      }, 1000);
+      
+    });
+  </script>
+  
+</body>
+</html>
