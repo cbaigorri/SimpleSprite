@@ -1,3 +1,12 @@
+/**
+ * Simple Sprite, Simply animates a sprite along an x or y axis.
+ * 
+ * Copyright (c) 2012 Chris Baigorri
+ * 
+ * Under MIT and GPL licenses:
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.gnu.org/licenses/gpl.html
+ */
 (function($) {
   $.fn.simpleSprite = function(options){
 
