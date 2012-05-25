@@ -4,11 +4,10 @@
   <meta charset="utf-8">
   <title>Simple Sprite Example</title>
   <meta name="description" content="">
-  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  
   <div id="example1"></div>
+  
   <ul>
     <li><a href="#" id="start-animation">Start</a></li>
     <li><a href="#" id="stop-animation">Stop</a></li>
@@ -24,8 +23,8 @@
       
       var monster = $('#example1')
         .simpleSprite({
-          frame:10,
           fps:10,
+          frames:10,
           width:64,
           height:64,
           sprite:'img/MonsterARun.png',

@@ -39,7 +39,7 @@
         } else {
           $this.css('background-position', '0px ' + ((count * settings.height) * -1) + 'px');
         }
-        if (++count === settings.frame) {
+        if (++count === settings.frames) {
           if (!settings.loop) {
             clearInterval(interval);
           } else {
@@ -59,7 +59,7 @@
 
   $.fn.simpleSprite.defaults = {
     fps: 30,
-    frame: 10,
+    frames: 10,
     width: 0,
     height: 0,
     sprite: '',

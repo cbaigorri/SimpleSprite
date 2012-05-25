@@ -33,7 +33,7 @@ $.fn.simpleSprite = (options) ->
       else
         $this.css('background-position', '0px ' + ((count * settings.height) * -1) + 'px' )
       
-      if ++count == settings.frame
+      if ++count == settings.frames
         if !settings.loop then clearInterval(interval) else count = 0
       @
     ,(1000/settings.fps)
@@ -47,7 +47,7 @@ $.fn.simpleSprite = (options) ->
   
 $.fn.simpleSprite.defaults = 
   fps: 30
-  frame: 10
+  frames: 10
   width: 0
   height: 0
   sprite: ''
