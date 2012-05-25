@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Simple Sprite Example</title>
+  <meta name="description" content="">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <div id="example1"></div>
+  <ul>
+    <li><a href="#" id="start-animation">Start</a></li>
+    <li><a href="#" id="stop-animation">Stop</a></li>
+  </ul>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
+
+  <script src="js/jquery.simplesprite.js"></script>
+  
+  <script>
+    $(function(){
+      
+      var monster = $('#example1')
+        .simpleSprite({
+          frame:10,
+          fps:10,
+          width:64,
+          height:64,
+          sprite:'img/MonsterARun.png',
+          autoplay: false,
+          loop:true
+        });
+      
+      $('#start-animation').bind('click', function(e){
+        e.preventDefault();
+        monster.play();
+      });
+      
+      $('#stop-animation').bind('click', function(e){
+        e.preventDefault();
+        monster.stop();
+      });
+      
+    });
+  </script>
+  
+</body>
+</html>
