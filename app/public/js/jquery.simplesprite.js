@@ -33,6 +33,7 @@
     this.play = function() {
       var $this;
       $this = this;
+      if (typeof interval !== 'undefined') clearInterval(interval);
       interval = setInterval(function() {
         if (settings.direction === 'x') {
           $this.css('background-position', ((count * settings.width) * -1) + 'px 0px');

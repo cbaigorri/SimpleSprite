@@ -27,6 +27,7 @@ $.fn.simpleSprite = (options) ->
   
   @play = () ->
     $this = this
+    if typeof interval isnt 'undefined' then clearInterval(interval)
     interval = setInterval ->
       if settings.direction == 'x'
         $this.css('background-position', ((count * settings.width) * -1) + 'px 0px' )
